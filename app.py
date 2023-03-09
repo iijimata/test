@@ -142,3 +142,32 @@ async def Thomson(data: NestedData):
                 }    
             ]              
         }
+
+    elif intent == "Z-gpt - 2":
+        answer = get.any
+        answer = f'{answer}！'
+
+        return {
+            "fulfillmentMessages": [
+                {
+                    "platform": "ACTIONS_ON_GOOGLE",
+                    "simpleResponses": {
+                    "simpleResponses": [
+                        {
+                            "textToSpeech": f'<speak><prosody rate="1.1" pitch="-15%">{answer}</prosody></speak>',
+                            "displayText": answer
+                        }
+                    ]
+                    }
+                }
+            ],
+            "outputContexts":[
+                {
+                    "name":"projects/thom-skph/agent/sessions/111101ab-c8c1-4356-b2d2-cff4e41eb0df/contexts/Z-gpt-followup",
+                    "lifespanCount": 1,
+                    "parameters": {
+                        "any": answer
+                    }
+                }    
+            ]              
+        }
