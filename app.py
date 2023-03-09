@@ -1,6 +1,7 @@
 from fastapi import FastAPI, Body
 from pydantic import BaseModel
 
+import os
 import openai
 
 app = FastAPI()
@@ -148,7 +149,7 @@ async def Thomson(data: NestedData):
     elif intent == "Z-gpt - 2":
         text = get.any
         # APIキーの設定
-        openai.api_key = "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"
+        openai.api_key = os.environ["OPENAI_API_KEY"]
 
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
