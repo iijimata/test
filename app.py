@@ -1,6 +1,8 @@
 from fastapi import FastAPI, Body
 from pydantic import BaseModel
 
+import openai
+
 app = FastAPI()
 
 #https://pkpd2fast.herokuapp.com/
