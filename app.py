@@ -148,7 +148,7 @@ async def Thomson(data: NestedData):
     elif intent == "Z-gpt - 2":
         text = get.any
         # APIキーの設定
-        openai.api_key = "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"
+        openai.api_key = "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"
 
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
