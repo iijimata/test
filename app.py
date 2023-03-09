@@ -153,6 +153,7 @@ async def Thomson(data: NestedData):
 
         response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
+            max_tokens=200,
             messages=[
                 {"role": "user", "content": text},
             ],
