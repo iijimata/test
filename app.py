@@ -11,6 +11,7 @@ class Parameters(BaseModel):
     age: float = 70
     scr: float = 0.85
     ccr: float = 68.63
+    any: str = "こんにちは"
 
 class Intent(BaseModel):
     displayName: str = "Q6-1-check ccr"
